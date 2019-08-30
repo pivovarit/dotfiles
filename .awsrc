@@ -1,0 +1,28 @@
+aws-ec2-iid() {
+    if [ "x$1" != "x" ]
+        then
+            aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" --output text --query 'Reservations[*].Instances[*].InstanceId'
+        else
+            echo "usage: aws-ec2-iid [instanceName]\naws-ec2-iid: error: too few arguments"
+    fi
+}
+
+aws-ec2-start() {
+    if [ "x$1" != "x" ]
+        then
+            aws ec2 start-instances --instance-id `aws-ec2-instance-id $1`
+        else
+            echo "usage: aws-ec2-start [instanceName]\naws-ec2-start: error: too few arguments"
+    fi
+}
+
+aws-ec2-url() {
+    if [ "x$1" != "x" ]
+        then
+            aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" --output text --query 'Reservations[*].Instances[*].PublicDnsName'
+        else
+            echo "usage: aws-ec2-url [instanceName]\naws-ec2-url: error: too few arguments"
+    fi
+}
+
+alias aws-ec2-ls='aws ec2 describe-instances --query "Reservations[*].Instances[*].[PublicDnsName]" --output=text'

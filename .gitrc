@@ -1,0 +1,6 @@
+alias gitclean='git branch | grep -v "master" | xargs git branch -D'
+alias gitp='git pull'
+
+gitpush() {
+    git push --set-upstream origin $(git branch | grep \* | cut -d ' ' -f2)
+}

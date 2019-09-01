@@ -10,7 +10,7 @@ aws-ec2-iid() {
 aws-ec2-start() {
     if [ "x$1" != "x" ]
         then
-            aws ec2 start-instances --instance-id `aws-ec2-instance-id $1`
+            aws ec2 start-instances --instance-id $(aws-ec2-iid $1)
         else
             echo "usage: aws-ec2-start [instanceName]\naws-ec2-start: error: too few arguments"
     fi

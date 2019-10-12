@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/grzegorzpiwowarek/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -105,10 +105,8 @@ decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }
 
-alias reload-shell='source ~/.zshrc'
+alias reload-sh='source ~/.zshrc'
 
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-source $HOME/.cargo/env
 source $HOME/.awsrc
 source $HOME/.dockerrc
 source $HOME/.gitrc

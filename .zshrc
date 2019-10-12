@@ -101,12 +101,9 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-decodeb64() {
-    echo "$1" | base64 --decode | pbcopy
-}
-
 alias reload-sh='source ~/.zshrc'
 
 source $HOME/.awsrc
 source $HOME/.dockerrc
 source $HOME/.gitrc
+source $HOME/.miscrc

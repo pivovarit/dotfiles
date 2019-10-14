@@ -1,1 +1,3 @@
 alias dockerclean='docker system prune -a'
+alias dockercu='docker-compose up -d'
+alias dockercd='docker-compose down'

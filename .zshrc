@@ -107,3 +107,5 @@ source $HOME/.awsrc
 source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc
+
+source $HOME/.sdkman/bin/sdkman-init.sh

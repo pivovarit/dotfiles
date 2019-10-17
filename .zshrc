@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -13,17 +12,7 @@ bindkey "^[e" end-of-line
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -38,8 +27,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=2
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -72,14 +60,18 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws docker zsh-autosuggestions dotenv osx)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.awsrc
+source $HOME/.dockerrc
+source $HOME/.gitrc
+source $HOME/.miscrc
+source $HOME/.sdkman/bin/sdkman-init.sh
+
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias reload-sh='source ~/.zshrc'
 
 # User configuration
 
@@ -97,15 +89,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-
-alias reload-sh='source ~/.zshrc'
-
-source $HOME/.awsrc
-source $HOME/.dockerrc
-source $HOME/.gitrc
-source $HOME/.miscrc
-
-source $HOME/.sdkman/bin/sdkman-init.sh

@@ -15,6 +15,8 @@ alias ipl='ipconfig getifaddr en0'
 alias c='clear'
 alias home='cd ~/'
 
+alias lsh='ls -lisAd .[^.]*'
+
 decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }

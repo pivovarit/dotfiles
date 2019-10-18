@@ -14,6 +14,12 @@ alias ipe='curl ipinfo.io/ip'
 alias ipl='ipconfig getifaddr en0'
 alias c='clear'
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
 decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }

@@ -17,6 +17,8 @@ alias home='cd ~/'
 
 alias lsh='ls -lisAd .[^.]*'
 
+alias vmstat='vm_stat'
+
 decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }

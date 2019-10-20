@@ -12,8 +12,9 @@ alias getpass="openssl rand -base64 20"
 alias serve='python -m SimpleHTTPServer 8000'
 alias ipe='curl ipinfo.io/ip'
 alias ipl='ipconfig getifaddr en0'
+
 alias c='clear'
-alias home='cd ~/'
+alias h='cd ~/'
 
 alias lsh='ls -lisAd .[^.]*'
 

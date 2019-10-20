@@ -20,6 +20,11 @@ alias lsh='ls -lisAd .[^.]*'
 
 alias vmstat='vm_stat'
 
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh='vim ~/.oh-my-zsh'
+
+alias reload-sh='source ~/.zshrc'
+
 decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }

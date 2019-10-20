@@ -60,7 +60,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git aws docker zsh-autosuggestions zsh-completions zsh-syntax-highlighting dotenv osx)
+plugins=(git aws docker zsh-autosuggestions zsh-completions dotenv osx)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.awsrc

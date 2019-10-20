@@ -1,6 +1,8 @@
 alias gitclean='git branch | grep -v "master" | xargs git branch -D'
 alias gitpu='git pull'
 
+alias gitlast='git rev-parse HEAD | pbcopy'
+
 gitpush() {
     git push --set-upstream origin $(git branch | grep \* | cut -d ' ' -f2)
 }

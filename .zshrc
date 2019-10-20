@@ -5,10 +5,10 @@ export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+bindkey '[D' backward-word
+bindkey '[C' forward-word
+bindkey '^[a' beginning-of-line
+bindkey '^[e' end-of-line
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
@@ -60,7 +60,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git aws docker zsh-autosuggestions dotenv osx)
+plugins=(git aws docker zsh-autosuggestions zsh-completions zsh-syntax-highlighting dotenv osx)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.awsrc

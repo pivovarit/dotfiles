@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 
 ZSH_THEME="bureau"
 
-plugins=(git aws docker zsh-autosuggestions zsh-completions dotenv osx)
+plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv osx)
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 

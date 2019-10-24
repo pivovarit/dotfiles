@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-ZSH_THEME="bureau"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv osx zsh-syntax-highlighting)
 
@@ -24,3 +24,5 @@ source $HOME/.awsrc
 source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

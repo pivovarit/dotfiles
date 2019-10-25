@@ -1,7 +1,10 @@
 alias gitclean='git branch | grep -v "master" | xargs git branch -D'
 alias gitmas='git checkout master'
-alias gitpu='git pull'
+
+alias gitl='git log'
 alias gits='git status'
+alias gitpu='git pull'
+alias gitpul='git pull'
 alias gitpull='git pull'
 
 alias gitlast='git rev-parse HEAD'

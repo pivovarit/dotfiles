@@ -20,6 +20,10 @@ alias lsh='ls -lisAd .[^.]*'
 
 alias vmstat='vm_stat'
 
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias ofd='open_command $PWD'
+
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh='vim ~/.oh-my-zsh'
 

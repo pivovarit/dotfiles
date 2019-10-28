@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv osx zsh-syntax-highlighting)
+plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 

@@ -33,6 +33,17 @@ decodeb64() {
     echo "$1" | base64 --decode | pbcopy
 }
 
+function _omz_osx_get_frontmost_app() {
+  local the_app=$(
+    osascript 2>/dev/null <<EOF
+      tell application "System Events"
+        name of first item of (every process whose frontmost is true)
+      end tell
+EOF
+  )
+  echo "$the_app"
+}
+
 function tab() {
   # Must not have trailing semicolon, for iTerm compatibility
   local command="cd \\\"$PWD\\\"; clear"

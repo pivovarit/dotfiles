@@ -1,5 +1,8 @@
 alias please='sudo'
+
 alias ls.='ls -d .* --color=auto'
+alias lsh='ls -lisAd .[^.]*'
+
 alias mount='mount |column -t'
 
 alias path='echo -e ${PATH//:/\\n}'
@@ -15,8 +18,6 @@ alias ipl='ipconfig getifaddr en0'
 
 alias c='clear'
 alias h='cd ~/'
-
-alias lsh='ls -lisAd .[^.]*'
 
 alias vmstat='vm_stat'
 

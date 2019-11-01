@@ -17,6 +17,7 @@ alias ipe='curl ipinfo.io/ip'
 alias ipl='ipconfig getifaddr en0'
 
 alias c='clear'
+alias f="open $HOME"
 alias h='cd ~/'
 
 alias vmstat='vm_stat'

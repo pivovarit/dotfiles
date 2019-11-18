@@ -15,5 +15,5 @@ alias gitwho='git shortlog -n -s --no-merges'
 alias gitlast='git rev-parse HEAD'
 
 gitpush() {
-    git push --set-upstream origin $(git branch | grep \* | cut -d ' ' -f2)
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }

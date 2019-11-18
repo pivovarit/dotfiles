@@ -1,13 +1,11 @@
-alias gitclean='git branch | grep -v "master" | xargs git branch -D'
-alias gitmas='git checkout master'
+alias gitc='git branch | grep -v "master" | xargs git branch -D'
+alias gitm='git checkout master'
 
 alias gitl='git log'
-alias gitlogp='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias gitlp='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias gitr='git reset --hard'
 alias gits='git status'
 alias gitpu='git pull'
-alias gitpul='git pull'
-alias gitpull='git pull'
 
 alias gitlast='git rev-parse HEAD'
 

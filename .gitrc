@@ -10,6 +10,8 @@ alias gitr='git reset --hard'
 alias gits='git status'
 alias gitpu='git pull'
 
+alias gitwho='git shortlog -n -s --no-merges'
+
 alias gitlast='git rev-parse HEAD'
 
 gitpush() {

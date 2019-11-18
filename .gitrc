@@ -1,8 +1,9 @@
 alias gitc='git branch | grep -v "master" | xargs git branch -D'
 alias gitm='git checkout master'
 
-alias gitl='git log'
-alias gitlp='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias gitlll='git log -u'
+alias gitll='git log'
+alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias gitr='git reset --hard'
 alias gits='git status'
 alias gitpu='git pull'

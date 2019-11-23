@@ -1,0 +1,7 @@
+[user]
+        name = Grzegorz Piwowarek
+        email = gpiwowarek@gmail.com
+[core]
+        autocrlf = input
+[pager]
+        branch = false

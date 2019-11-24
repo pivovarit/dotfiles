@@ -5,7 +5,7 @@ alias gitm='git checkout master'
 alias gitlll='git log -u'
 alias gitll='git log'
 alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
-alias gitlg='git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative'
+
 alias gitdiffc='git diff --cached HEAD^'
 alias gitam='git commit --amend --no-edit'
 alias gitr='git reset --hard'

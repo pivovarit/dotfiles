@@ -19,3 +19,16 @@ alias gitlast='git rev-parse HEAD'
 gitpush() {
     git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
+
+ghclone() {
+    if [ "x$1" != "x" ]
+        then
+            url=$1
+            repository="${url##*/}"
+            user=$(echo "$url" | cut -d / -f 4)
+            git clone "https://github.com/$user/$repository.git"
+        else
+            echo "usage: ghclone [GitHub repository URL]\nghclone: error: too few arguments"
+    fi
+
+}

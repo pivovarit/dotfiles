@@ -32,5 +32,5 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias reload-sh='source ~/.zshrc'
 
 decodeb64() {
-    base64 --decode "$1"
+    echo "$1" | base64 --decode
 }

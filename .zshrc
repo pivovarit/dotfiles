@@ -4,6 +4,11 @@ export LC_ALL=en_US.UTF-8
 
 export GPG_TTY=$(tty)
 
+export UPDATE_ZSH_DAYS=3
+
+unsetopt inc_append_history
+unsetopt share_history
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)
@@ -16,8 +21,6 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 bindkey "\e[A" history-search-backward
 bindkey "\e[B" history-search-forward
-
-export UPDATE_ZSH_DAYS=1
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.sdkman/bin/sdkman-init.sh

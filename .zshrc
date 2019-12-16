@@ -6,8 +6,7 @@ export GPG_TTY=$(tty)
 
 export UPDATE_ZSH_DAYS=3
 
-unsetopt inc_append_history
-unsetopt share_history
+setopt noincappendhistory
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

@@ -29,4 +29,4 @@ source $HOME/.miscrc
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-setopt noincappendhistory
+unsetopt share_history

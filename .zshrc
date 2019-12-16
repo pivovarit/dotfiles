@@ -6,8 +6,6 @@ export GPG_TTY=$(tty)
 
 export UPDATE_ZSH_DAYS=3
 
-setopt noincappendhistory
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)
@@ -30,3 +28,5 @@ source $HOME/.gitrc
 source $HOME/.miscrc
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+setopt noincappendhistory

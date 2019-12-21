@@ -11,6 +11,7 @@ alias gitam='git commit --amend --no-edit'
 alias gitr='git reset --hard'
 alias gits='git status'
 alias gitpu='git pull'
+alias gitrestart='gitr && gitm && gitp && gitc'
 
 alias gitwho='git shortlog -n -s --no-merges'
 

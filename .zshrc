@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

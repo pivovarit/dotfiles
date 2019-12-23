@@ -18,8 +18,6 @@ plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-sy
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-bindkey "[D" backward-word
-bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 bindkey "\e[A" history-search-backward

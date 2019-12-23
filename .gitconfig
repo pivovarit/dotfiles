@@ -4,7 +4,7 @@
 [core]
         autocrlf = input
 [pager]
-        branch = false
+	branch = false
 [alias]
     co = checkout
     br = branch

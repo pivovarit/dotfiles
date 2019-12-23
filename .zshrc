@@ -9,6 +9,7 @@ export LC_ALL=en_US.UTF-8
 
 export GPG_TTY=$(tty)
 
+export DISABLE_UPDATE_PROMPT=true
 export UPDATE_ZSH_DAYS=3
 
 ZSH_THEME="powerlevel10k/powerlevel10k"

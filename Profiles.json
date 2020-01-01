@@ -354,7 +354,7 @@
     "Blue Component" : 0,
     "Red Component" : 0
   },
-  "Guid" : "F54D62FE-FE50-4410-B9D8-8CF8EB54CB1C",
+  "Guid" : "default",
   "Horizontal Spacing" : 1
 },
 {
@@ -711,7 +711,7 @@
     "Blue Component" : 0,
     "Red Component" : 0
   },
-  "Guid" : "E783C77F-0E3A-4271-BAE3-FAF73C452FDC",
+  "Guid" : "new-profile",
   "Horizontal Spacing" : 1
 },
 {
@@ -1009,7 +1009,7 @@
   },
   "Name" : "Hotkey Window",
   "Blinking Cursor" : false,
-  "Guid" : "9757D28F-4232-4353-847D-2B460B3CFE5C",
+  "Guid" : "hotkey",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Green Component" : 1,

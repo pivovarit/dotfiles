@@ -20,6 +20,8 @@ alias c='clear'
 alias f="open $HOME"
 alias h='cd ~/'
 
+alias kube='kubectl'
+
 alias vmstat='vm_stat'
 
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"

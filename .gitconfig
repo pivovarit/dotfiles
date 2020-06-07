@@ -10,7 +10,8 @@
     br = branch
     ci = commit
     st = status
-    
+
+    append = commit --amend --no-edit
     purr = pull --rebase
     puff = pull --ff-only
     difff = diff --color-words #just words

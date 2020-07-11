@@ -36,3 +36,7 @@ alias reload-sh='source ~/.zshrc'
 decodeb64() {
     echo "$1" | base64 --decode
 }
+
+hgrep () { 
+    history | egrep --color=auto --recursive "$@" | egrep --color=auto --recursive -v "hgrep $@"
+}

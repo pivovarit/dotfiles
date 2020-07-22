@@ -42,6 +42,5 @@ hgrep () {
 }
 
 hz() {
-    version_string=":${2:-4.0.2}"
-    docker run -e JAVA_OPTS="-Dhazelcast.local.publicAddress=$(ipconfig getifaddr en0):${1:-5701}" -it -p ${1:-5701}:5701 hazelcast/hazelcast${version_string}
+    docker run -e JAVA_OPTS="-Dhazelcast.local.publicAddress=$(ipconfig getifaddr en0):${1:-5701}" -it -p ${1:-5701}:5701 hazelcast/hazelcast:"${2:-4.0.2}"
 }

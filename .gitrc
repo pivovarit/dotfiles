@@ -8,7 +8,6 @@ alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
 alias gitdiffc='git diff --cached HEAD^'
 alias gitam='git commit --amend --no-edit'
-alias gitr='git reset --hard'
 alias gits='git status'
 alias gitpu='git pull'
 alias gitrestart='gitr && gitm && gitpu && gitc'

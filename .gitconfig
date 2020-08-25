@@ -12,7 +12,7 @@
     st = status
 
     append = commit --amend --no-edit
-    appendall = !add -A && commit --amend --no-edit
+    appendall = !git add -A && git commit --amend --no-edit
     purr = pull --rebase
     puff = pull --ff-only
     

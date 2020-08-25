@@ -10,6 +10,8 @@
     br = branch
     ci = commit
     st = status
+    
+    r = !git reset --hard
 
     append = commit --amend --no-edit
     appendall = !git add -A && git commit --amend --no-edit

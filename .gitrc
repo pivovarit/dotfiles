@@ -15,8 +15,6 @@ alias gitrestart='gitr && gitm && gitpu && gitc'
 
 alias gitwho='git shortlog -n -s --no-merges'
 
-alias gitlast='git rev-parse HEAD'
-
 ghclone() {
     if [ "x$1" != "x" ]
         then

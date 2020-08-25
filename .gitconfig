@@ -15,6 +15,7 @@
     appendall = !git add -A && git commit --amend --no-edit
     purr = pull --rebase
     puff = pull --ff-only
+    last = !git rev-parse HEAD
     
     difff = diff --color-words #just words
     bbranch = branch -v

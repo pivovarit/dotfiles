@@ -15,6 +15,7 @@
     appendall = add -A && commit --amend --no-edit
     purr = pull --rebase
     puff = pull --ff-only
+    
     difff = diff --color-words #just words
     bbranch = branch -v
     branches = branch -avvl
@@ -22,6 +23,7 @@
     unstage = reset HEAD --
     makegitrepo = !git init && git add . && git commit -m \"initial commit\"
     fpush = push --force-with-lease
+    pushup = !git push -u origin $(git symbolic-ref --short HEAD)
 
     #BASIC HISTORY VIEWING
 

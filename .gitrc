@@ -17,10 +17,6 @@ alias gitwho='git shortlog -n -s --no-merges'
 
 alias gitlast='git rev-parse HEAD'
 
-gitpush() {
-    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
-}
-
 ghclone() {
     if [ "x$1" != "x" ]
         then

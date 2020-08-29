@@ -6,10 +6,6 @@ alias gitlll='git log -u'
 alias gitll='git log'
 alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
-alias gitdiffc='git diff --cached HEAD^'
-alias gitam='git commit --amend --no-edit'
-alias gits='git status'
-alias gitpu='git pull'
 alias gitrestart='git r && gitm && gitpu && gitc'
 
 alias gitwho='git shortlog -n -s --no-merges'

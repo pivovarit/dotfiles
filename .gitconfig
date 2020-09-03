@@ -12,6 +12,7 @@
     st = status
     
     r = !git reset --hard
+    remotes = remote -v
 
     append = commit --amend --no-edit
     appendall = !git add -A && git commit --amend --no-edit

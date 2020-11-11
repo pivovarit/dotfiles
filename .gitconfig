@@ -109,3 +109,5 @@
 
     #add all, commit with message and push to remote
     apm = "!f() { git add --all && git commit -m \"$@\" && git push; }; f"
+[pull]
+	rebase = false

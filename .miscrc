@@ -15,6 +15,7 @@ alias getpass='echo "$(openssl rand -base64 5)-$(openssl rand -base64 5)-$(opens
 alias serve='python -m SimpleHTTPServer 8000'
 alias ipe='curl ipinfo.io/ip'
 alias ipl='ipconfig getifaddr en0'
+alias flushdns='sudo killall -HUP mDNSResponder'
 
 alias c='clear'
 alias f="open $HOME"

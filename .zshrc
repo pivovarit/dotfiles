@@ -14,6 +14,8 @@ export UPDATE_ZSH_DAYS=3
 
 export HISTFILE=$HOME/.zsh_history
 
+export GOPRIVATE="github.com/hazelcast/*"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)

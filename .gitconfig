@@ -112,3 +112,5 @@
     apm = "!f() { git add --all && git commit -m \"$@\" && git push; }; f"
 [pull]
 	rebase = false
+[url "ssh://git@github.com/hazelcast"]
+        insteadOf = https://github.com/hazelcast

@@ -14,7 +14,7 @@ export UPDATE_ZSH_DAYS=3
 
 export HISTFILE=$HOME/.zsh_history
 
-export GOPRIVATE='github.com/hazelcast*'
+export AWS_REGION=us-west-2
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

@@ -42,6 +42,6 @@ hgrep () {
     history | egrep --color=auto --recursive "$@" | egrep --color=auto --recursive -v "hgrep $@"
 }
 
-hzd() {
-    docker run -e "HZ_NETWORK_PUBLICADDRESS=$(ipconfig getifaddr en0):${1:-5701}" -it -p ${1:-5701}:5701 hazelcast/hazelcast:"${2:-5.0}"
+lports() {
+    lsof -i -P | grep LISTEN | grep $1
 }

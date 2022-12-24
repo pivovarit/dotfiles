@@ -35,6 +35,8 @@ source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc
 
+eval "$( command rapture shell-init )"
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 unsetopt share_history

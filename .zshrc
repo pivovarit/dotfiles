@@ -16,6 +16,8 @@ export HISTFILE=$HOME/.zsh_history
 
 export AWS_REGION=us-west-2
 
+export GRADLE_OPTS=-Dorg.gradle.daemon=false
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)

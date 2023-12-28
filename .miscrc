@@ -35,6 +35,7 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias reload-sh='source ~/.zshrc'
 
 alias gobenchall='go test -bench=. ./... -benchmem -run=^$'
+alias gotestall='go test ./...'
 
 decodeb64() {
     echo "$1" | base64 --decode

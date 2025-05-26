@@ -37,8 +37,10 @@ source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc
 
-export GPG_TTY=$(tty)
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 unsetopt share_history
+
+preexec() {
+  export GPG_TTY=$(tty)
+}

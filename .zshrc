@@ -18,6 +18,8 @@ export GRADLE_OPTS=-Dorg.gradle.daemon=false
 
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git aws gradle docker zsh-autosuggestions zsh-completions dotenv zsh-syntax-highlighting)

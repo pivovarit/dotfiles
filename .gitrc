@@ -24,3 +24,5 @@ ghclone() {
     fi
 
 }
+
+gw() { cd "$(git worktree list | fzf | awk '{print $1}')" }

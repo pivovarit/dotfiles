@@ -16,9 +16,6 @@ export AWS_REGION=us-west-2
 
 export GRADLE_OPTS=-Dorg.gradle.daemon=false
 
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
-
-export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -34,7 +31,6 @@ bindkey "\e[B" history-search-forward
 source $ZSH/oh-my-zsh.sh
 source $HOME/.sdkman/bin/sdkman-init.sh
 
-source $HOME/.awsrc
 source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc

@@ -1,12 +1,12 @@
 alias gitb='git branch'
-alias gitc='git branch | grep -v "master" | xargs git branch -D'
-alias gitm='git checkout master'
+alias gitc='git branch | grep -v "$(git default-branch)" | xargs git branch -D'
+alias gitm='git checkout $(git default-branch)'
 
 alias gitlll='git log -u'
 alias gitll='git log'
 alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
-alias gitrestart='git r && gitm && gitpu && gitc'
+alias gitrestart='git r && gitm && git pushup && gitc'
 
 alias gitwho='git shortlog -n -s --no-merges'
 

@@ -7,7 +7,8 @@
 	branch = false
 [alias]
     co = checkout
-    com = checkout master
+    default-branch = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+    com = !git checkout $(git default-branch)
     br = branch
     ci = commit
     st = status
@@ -27,7 +28,7 @@
    
     fpush = push --force-with-lease
     pushup = !git push -u origin $(git symbolic-ref --short HEAD)
-    pullup = pull upstream master
+    pullup = !git pull upstream $(git default-branch)
     difflast = diff HEAD^
     
      makegitrepo = !git init && git add . && git commit -m \"initial commit\"
@@ -51,9 +52,9 @@
     #WHAT WAS GOING ON, WHILE YOU WERE AWAY
 
     anychanges = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
-    anychangesonmaster = !sh -c 'git fetch' && git log --oneline HEAD..origin/master
+    anychangesonmaster = !sh -c 'git fetch' && git log --oneline HEAD..origin/$(git default-branch)
     whoischanging = !sh -c 'git shortlog HEAD..origin/$0'
-    whoischangingmaster = !sh -c 'git shortlog HEAD..origin/master'
+    whoischangingmaster = !sh -c 'git shortlog HEAD..origin/$(git default-branch)'
 
     #what branches you have on origin, with info on who is guilty and how long ago. Useful for gitflow and feature branches in general. Requires fetch up-front.
     showorigin = "!sh -c 'for branch in `git branch -r | grep -v HEAD`;do echo `git show -s --format=\"%Cred%ci %C(green)%h %C(yellow)%cr %C(magenta)%an %C(blue)\" $branch | head -n 1` \\\t$branch; done | sort -r'"
@@ -79,7 +80,7 @@
 
     #Deletes all branches that were safely merged into the master. All other are skipped (no worries).
     #on osx xargs does not have -r argument, so it fail. If you remove -r, it will run at least once, making this not safe operation
-    cleanup = !git branch --merged=master | grep -Ev '^\\* | master$' | xargs -r git branch -D
+    cleanup = "!f() { default=$(git default-branch); git branch --merged=$default | grep -Ev \"^\\\\* | $default\\$\" | xargs -r git branch -D; }; f"
     cleanlocal = !git fetch -p;git branch -vv | grep ": gone" | awk '{print $1}' | xargs git branch -D 
 
     #Deletes orphaned remote branches (.git/refs/remotes/origin), clean up reflog and remove all untracked files
@@ -112,5 +113,3 @@
     apm = "!f() { git add --all && git commit -m \"$@\" && git push; }; f"
 [pull]
 	rebase = false
-[url "ssh://git@github.com/hazelcast"]
-        insteadOf = https://github.com/hazelcast

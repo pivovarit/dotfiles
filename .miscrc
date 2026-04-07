@@ -12,7 +12,7 @@ alias nowdate='date +"%d-%m-%Y"'
 
 alias untar='tar -zxvf '
 alias getpass='echo "$(openssl rand -base64 5)-$(openssl rand -base64 5)-$(openssl rand -base64 5)"'
-alias serve='python -m SimpleHTTPServer 8000'
+alias serve='python3 -m http.server 8000'
 alias ipe='curl ipinfo.io/ip'
 alias ipl='ipconfig getifaddr en0'
 alias flushdns='sudo killall -HUP mDNSResponder'

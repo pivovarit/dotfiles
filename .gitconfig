@@ -27,7 +27,7 @@
     unstage = reset HEAD --
    
     fpush = push --force-with-lease
-    pushup = !git push -u origin $(git symbolic-ref --short HEAD)
+    pushup = !git push -u origin HEAD:refs/heads/$(git symbolic-ref --short HEAD)
     pullup = !git pull upstream $(git default-branch)
     difflast = diff HEAD^
     

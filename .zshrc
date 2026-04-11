@@ -7,14 +7,18 @@ export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export DISABLE_UPDATE_PROMPT=true
-export UPDATE_ZSH_DAYS=3
+DISABLE_UPDATE_PROMPT=true
+UPDATE_ZSH_DAYS=3
 
 export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 export AWS_REGION=us-west-2
 
 export GRADLE_OPTS=-Dorg.gradle.daemon=false
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -29,20 +33,16 @@ bindkey "\e[A" history-search-backward
 bindkey "\e[B" history-search-forward
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.sdkman/bin/sdkman-init.sh
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-source $HOME/.dockerrc
-source $HOME/.gitrc
-source $HOME/.miscrc
-
-eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+[[ -f $HOME/.dockerrc ]] && source $HOME/.dockerrc
+[[ -f $HOME/.gitrc ]] && source $HOME/.gitrc
+[[ -f $HOME/.miscrc ]] && source $HOME/.miscrc
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 unsetopt share_history
 
-preexec() {
-  export GPG_TTY=$(tty)
-}
+export GPG_TTY=$(tty)
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/go/bin"

@@ -35,6 +35,8 @@ source $HOME/.dockerrc
 source $HOME/.gitrc
 source $HOME/.miscrc
 
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 unsetopt share_history

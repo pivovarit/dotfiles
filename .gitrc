@@ -12,6 +12,8 @@ alias gitwho='git shortlog -n -s --no-merges'
 
 alias gitclean='git for-each-ref --format="%(if) %(HEAD) %(then) %(else) %(refname:short) %(end)" refs/heads/ | xargs -r git branch -D'
 
+alias gitcleanw='git worktree list --porcelain | awk "/^worktree /{print \$2}" | tail -n +2 | xargs -r -n1 git worktree remove --force; git worktree prune; git for-each-ref --format="%(if) %(HEAD) %(then) %(else) %(refname:short) %(end)" refs/heads/ | xargs -r git branch -D'
+
 ghclone() {
     if [ "x$1" != "x" ]
         then

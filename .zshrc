@@ -46,3 +46,9 @@ unsetopt share_history
 export GPG_TTY=$(tty)
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
+
+committed-at() {
+  local h="${1:-05}"
+  local d="$(date +%Y-%m-%d)T${h}:$(printf '%02d:%02d' $((RANDOM%60)) $((RANDOM%60)))"
+  GIT_COMMITTER_DATE="$d" git commit --amend --no-edit --date="$d"
+}
